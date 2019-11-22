@@ -1,0 +1,153 @@
+import java.awt.EventQueue;
+import java.awt.Image;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.Color;
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+import javax.swing.JButton;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+
+@SuppressWarnings("serial")
+public class Login extends JFrame {
+
+	private JPanel contentPane;
+	private JPasswordField passwordField;
+	private JTextField textFieldUN;
+
+	/**
+	 * Launch the application.
+	 */
+	Connection connection = null;
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Login frame = new Login();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Login() {
+		connection = sqliteConnection.dbConnector();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 480, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel Image = new JLabel("");
+		Image img = new ImageIcon(this.getClass().getResource("/login.png")).getImage();
+		Image.setIcon(new ImageIcon(img));
+		Image.setBounds(10, 61, 128, 128);
+		contentPane.add(Image);
+		
+		JLabel lblLoginSystem = new JLabel("Login System");
+		lblLoginSystem.setHorizontalAlignment(SwingConstants.CENTER);
+		lblLoginSystem.setForeground(Color.RED);
+		lblLoginSystem.setFont(new Font("Times New Roman", Font.BOLD, 22));
+		lblLoginSystem.setBounds(126, 0, 200, 50);
+		contentPane.add(lblLoginSystem);
+		
+		JLabel label_UserName = new JLabel("UserName");
+		label_UserName.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		label_UserName.setBounds(158, 71, 71, 30);
+		contentPane.add(label_UserName);
+		
+		JLabel label_Password = new JLabel("Password");
+		label_Password.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		label_Password.setBounds(158, 112, 71, 30);
+		contentPane.add(label_Password);
+		
+		JButton btnLogin = new JButton("Login");
+		btnLogin.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
+			public void actionPerformed(ActionEvent arg0) {
+
+				try{
+					String query="select * from User where UserName = ? and Password = ?";
+					PreparedStatement pst = connection.prepareStatement(query);
+					pst.setString(1, textFieldUN.getText());
+					pst.setString(2, passwordField.getText());
+					
+					ResultSet rs = pst.executeQuery();
+					int count = 0;
+					while(rs.next()){
+						count = count + 1;
+					}
+					if (count == 1){
+						JOptionPane.showMessageDialog(null, "UserName and Password is correct");
+						EmployeeInfo Emplinfo = new EmployeeInfo();
+						Emplinfo.setVisible(true);
+					}
+					else if(count > 1){
+						JOptionPane.showMessageDialog(null, "Duplicate UserName and Password");
+					}
+					else{
+						JOptionPane.showMessageDialog(null, "UserName and Password is not correct Try Again...");
+					}
+					
+					rs.close();
+					pst.close();
+				}catch(Exception e){
+					JOptionPane.showMessageDialog(null, e);
+				}
+			}
+		});
+		btnLogin.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		btnLogin.setBounds(239, 153, 97, 30);
+		contentPane.add(btnLogin);
+		
+		JButton btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				Register register = new Register();
+				register.setVisible(true);
+			}
+		});
+		btnRegister.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		btnRegister.setBounds(342, 153, 97, 30);
+		contentPane.add(btnRegister);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(239, 112, 200, 23);
+		contentPane.add(passwordField);
+		
+		textFieldUN = new JTextField();
+		textFieldUN.setColumns(10);
+		textFieldUN.setBounds(239, 71, 200, 23);
+		contentPane.add(textFieldUN);
+		
+		JLabel label_Design = new JLabel("Designed By: Mr.Dina Chanthan");
+		label_Design.setHorizontalAlignment(SwingConstants.CENTER);
+		label_Design.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		label_Design.setBounds(139, 221, 200, 23);
+		contentPane.add(label_Design);
+		
+		JLabel Background_Image = new JLabel("");
+		Image img2 = new ImageIcon(this.getClass().getResource("/background.jpg")).getImage();
+		Background_Image.setIcon(new ImageIcon(img2));
+		Background_Image.setBounds(0, 0, 464, 261);
+		contentPane.add(Background_Image);
+	}
+
+}

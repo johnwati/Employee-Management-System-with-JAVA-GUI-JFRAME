@@ -1,0 +1,340 @@
+[
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c247cbc944f040e46ccf2c43255472ab19485f33",
+    "jarFileModificationDate": "2017-08-29T13:26:06.654+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\jsse.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc",
+    "version": {
+      "major": 3,
+      "minor": 20,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "6e9d6da531eb356c1c9ebda25e75f6b6116597e8",
+    "jarFileModificationDate": "2017-10-25T04:27:13.288+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.20.0.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "0e1eb5bf8b8a46f4baca0447cde83197ae9eab58",
+    "jarFileModificationDate": "2017-08-29T13:26:02.613+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\jfxrt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "58915d835b40df0c0270ba76639006e135a67315",
+    "jarFileModificationDate": "2017-08-29T13:26:03.218+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\zipfs.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "97f0f18b2d0a5ed5a01a682027efa9fb8bae1a5c",
+    "jarFileModificationDate": "2017-08-29T13:26:03.210+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\sunpkcs11.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "76ba0e08c6b3df9fb1551f00189323dac8fc818c",
+    "jarFileModificationDate": "2017-08-29T13:26:03.201+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\sunmscapi.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "sqlite-jdbc-3.7.15-SNAPSHOT-javadoc",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b31bf38ca4bd78352a8fdba20aac0153174f9bb9",
+    "jarFileModificationDate": "2017-10-25T04:27:13.001+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.7.15-SNAPSHOT-javadoc.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d958adac5f1edefa22045a1409ccdeff154779c1",
+    "jarFileModificationDate": "2017-08-29T13:26:03.623+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\jce.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc4",
+    "version": {
+      "major": 3,
+      "minor": 8,
+      "micro": 2,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "7cd00f5b72f6ee56b25ff73d3f677223cca0cfe4",
+    "jarFileModificationDate": "2017-10-25T04:27:12.377+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc4-3.8.2-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "fc6b32a4cd867e010588e91825fe971b7402e300",
+    "jarFileModificationDate": "2017-08-29T13:26:04.231+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\resources.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc",
+    "version": {
+      "major": 3,
+      "minor": 7,
+      "micro": 15,
+      "qualifier": "M1"
+    },
+    "jarFileFingerprint": "9b713ffe2bd3e1f1ddea48cce098e3f6de9a0430",
+    "jarFileModificationDate": "2017-10-25T04:27:12.600+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.7.15-M1.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc",
+    "version": {
+      "major": 3,
+      "minor": 7,
+      "micro": 15,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "b9b52d0ce83bec774620d5fa31cbd98103147df6",
+    "jarFileModificationDate": "2017-10-25T04:27:12.992+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.7.15-SNAPSHOT-2.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "cf8df0eb89b248f0a0a3cc9d3d76f098cb1dc719",
+    "jarFileModificationDate": "2017-08-29T13:26:01.816+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\access-bridge-64.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "272730147235fd0108dca0f47e11c2a70237c1c2",
+    "jarFileModificationDate": "2017-08-29T13:26:02.624+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\nashorn.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "697d3196660e08fd6686c651b317e0cf1a1c5554",
+    "jarFileModificationDate": "2017-08-29T13:26:06.923+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\localedata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "b6371165bda2095e9bfbba429f05c9f66b8f797b",
+    "jarFileModificationDate": "2017-08-29T13:26:01.958+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\dnsns.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "d30c289a19ebe3cc30ed2ca7f4978392168f67c2",
+    "jarFileModificationDate": "2017-08-29T13:26:02.549+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\jaccess.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "953ee91fd9bd5cddb1880182bf0a122326b4f5eb",
+    "jarFileModificationDate": "2017-08-29T13:26:06.599+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "org.xerial.sqlite-jdbc",
+    "version": {
+      "major": 3,
+      "minor": 7,
+      "micro": 15,
+      "qualifier": "SNAPSHOT"
+    },
+    "jarFileFingerprint": "52314f3ac527c643444f529fe9ee00c25aa16d91",
+    "jarFileModificationDate": "2017-10-25T04:27:12.788+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.7.15-SNAPSHOT.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "rs2xml",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8a970b2f2ce64a6d8c96b850d8db8908ec3148f1",
+    "jarFileModificationDate": "2017-10-25T07:19:27.813+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\rs2xml.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "8e214356f00393c1165de59d644340f2d430a8ca",
+    "jarFileModificationDate": "2017-08-29T13:26:03.711+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\jfr.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "9edf0f7c3cdd91cf3596edf9970074112cf13d3c",
+    "jarFileModificationDate": "2017-08-29T13:26:02.975+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\sunec.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "05bf26a282394a20438e0a57758d19d6dfb6e909",
+    "jarFileModificationDate": "2017-08-29T13:26:06.712+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\charsets.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "f7eb06cc03499db9abd08ca922361a0bd8831959",
+    "jarFileModificationDate": "2017-08-29T13:26:01.849+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\cldrdata.jar",
+    "javaRuntime": true
+  },
+  {
+    "symbolicName": "sqlite-jdbc-3.7.2-javadoc",
+    "version": {
+      "major": -1,
+      "minor": -1,
+      "micro": -1,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "c02545d6dcfc058adaf606bd7f2087fc11482179",
+    "jarFileModificationDate": "2017-10-25T04:27:12.390+07:00",
+    "location": "C:\\Users\\Dina Chanthan\\Desktop\\JavaGui\\Company\\resources\\sqlite-jdbc-3.7.2-javadoc.jar",
+    "javaRuntime": false
+  },
+  {
+    "symbolicName": "jre",
+    "version": {
+      "major": 1,
+      "minor": 0,
+      "micro": 0,
+      "qualifier": ""
+    },
+    "jarFileFingerprint": "3e03b24852bf437dfae6a779e270eee60af5b641",
+    "jarFileModificationDate": "2017-08-29T13:26:02.998+07:00",
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\ext\\sunjce_provider.jar",
+    "javaRuntime": true
+  }
+]

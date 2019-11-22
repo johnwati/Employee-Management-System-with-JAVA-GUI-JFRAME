@@ -1,0 +1,157 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.sql.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import net.proteanit.sql.DbUtils;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
+
+
+public class EmployeeInfo extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					EmployeeInfo frame = new EmployeeInfo();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	Connection connection = null;
+	private JLabel lblNewLabel;
+	private final JLabel lblDesignedByMr = new JLabel("Designed By: Mr. Dina Chanthan");
+	private JLabel lblNewLabel_1;
+	private JLabel lblNewLabel_2;
+	private JLabel lblNewLabel_3;
+	private JLabel lblNewLabel_4;
+	private JTextField textFieldEID;
+	private JTextField textFieldName;
+	private JTextField textFieldSurname;
+	private JTextField textFieldAge;
+	private JButton btnSave;
+	public EmployeeInfo() {
+		
+		connection = sqliteConnection.dbConnector();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 705, 450);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnLoadTable = new JButton("Load Employee Data");
+		btnLoadTable.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		btnLoadTable.setForeground(new Color(30, 144, 255));
+		btnLoadTable.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					String query = "select EID, Name, Surname, Age from Employeeinfo";
+					PreparedStatement pst = connection.prepareStatement(query);
+					ResultSet rs = pst.executeQuery();
+					table.setModel(DbUtils.resultSetToTableModel(rs));
+					pst.close();
+					rs.close();
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		btnLoadTable.setBounds(240, 322, 439, 31);
+		contentPane.add(btnLoadTable);
+		
+		table = new JTable();
+		table.setBounds(242, 70, 437, 241);
+		contentPane.add(table);
+		
+		lblNewLabel = new JLabel("The Employee Information System");
+		lblNewLabel.setForeground(new Color(255, 0, 0));
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 24));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(91, 11, 499, 38);
+		contentPane.add(lblNewLabel);
+		lblDesignedByMr.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		lblDesignedByMr.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDesignedByMr.setBounds(240, 366, 233, 22);
+		contentPane.add(lblDesignedByMr);
+		
+		lblNewLabel_1 = new JLabel("EID");
+		lblNewLabel_1.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_1.setBounds(10, 84, 65, 31);
+		contentPane.add(lblNewLabel_1);
+		
+		lblNewLabel_2 = new JLabel("Name");
+		lblNewLabel_2.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_2.setBounds(10, 125, 65, 31);
+		contentPane.add(lblNewLabel_2);
+		
+		lblNewLabel_3 = new JLabel("Surname");
+		lblNewLabel_3.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_3.setBounds(10, 167, 65, 31);
+		contentPane.add(lblNewLabel_3);
+		
+		lblNewLabel_4 = new JLabel("Age");
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 14));
+		lblNewLabel_4.setBounds(10, 209, 65, 31);
+		contentPane.add(lblNewLabel_4);
+		
+		textFieldEID = new JTextField();
+		textFieldEID.setBounds(76, 84, 157, 31);
+		contentPane.add(textFieldEID);
+		textFieldEID.setColumns(10);
+		
+		textFieldName = new JTextField();
+		textFieldName.setBounds(76, 121, 156, 31);
+		contentPane.add(textFieldName);
+		textFieldName.setColumns(10);
+		
+		textFieldSurname = new JTextField();
+		textFieldSurname.setBounds(76, 163, 156, 31);
+		contentPane.add(textFieldSurname);
+		textFieldSurname.setColumns(10);
+		
+		textFieldAge = new JTextField();
+		textFieldAge.setBounds(76, 204, 156, 31);
+		contentPane.add(textFieldAge);
+		textFieldAge.setColumns(10);
+		
+		btnSave = new JButton("Save");
+		btnSave.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				try {
+					String query = "select * from Employeeinfo";
+					PreparedStatement pst = connection.prepareStatement(query);
+					ResultSet rs = pst.executeQuery();
+					table.setModel(DbUtils.resultSetToTableModel(rs));
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				
+			}
+		});
+		btnSave.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		btnSave.setBounds(76, 266, 89, 31);
+		contentPane.add(btnSave);
+	}
+}

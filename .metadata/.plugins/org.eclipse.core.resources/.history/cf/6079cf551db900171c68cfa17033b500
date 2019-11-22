@@ -1,0 +1,86 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.sql.*;
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTable;
+import net.proteanit.sql.DbUtils;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
+
+
+public class EmployeeInfo extends JFrame {
+
+	private JPanel contentPane;
+	private JTable table;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					EmployeeInfo frame = new EmployeeInfo();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	Connection connection = null;
+	private JLabel lblNewLabel;
+	private final JLabel lblDesignedByMr = new JLabel("Designed By Mr. Dina Chanthan");
+	public EmployeeInfo() {
+		
+		connection = sqliteConnection.dbConnector();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 705, 376);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnLoadTable = new JButton("Load Employee Data");
+		btnLoadTable.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		btnLoadTable.setForeground(new Color(30, 144, 255));
+		btnLoadTable.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				try {
+					String query = "select * from Employeeinfo";
+					PreparedStatement pst = connection.prepareStatement(query);
+					ResultSet rs = pst.executeQuery();
+					table.setModel(DbUtils.resultSetToTableModel(rs));
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		btnLoadTable.setBounds(238, 265, 233, 31);
+		contentPane.add(btnLoadTable);
+		
+		table = new JTable();
+		table.setBounds(10, 70, 669, 184);
+		contentPane.add(table);
+		
+		lblNewLabel = new JLabel("The Employee Information System");
+		lblNewLabel.setForeground(new Color(255, 0, 0));
+		lblNewLabel.setFont(new Font("Times New Roman", Font.BOLD, 24));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(91, 11, 499, 38);
+		contentPane.add(lblNewLabel);
+		lblDesignedByMr.setFont(new Font("Times New Roman", Font.BOLD | Font.ITALIC, 12));
+		lblDesignedByMr.setHorizontalAlignment(SwingConstants.CENTER);
+		lblDesignedByMr.setBounds(248, 307, 223, 22);
+		contentPane.add(lblDesignedByMr);
+	}
+}

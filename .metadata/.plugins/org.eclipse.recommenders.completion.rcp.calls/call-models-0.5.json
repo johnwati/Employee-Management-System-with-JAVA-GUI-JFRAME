@@ -1,0 +1,7 @@
+{
+  "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar": {
+    "location": "C:\\Program Files\\Java\\jre1.8.0_144\\lib\\rt.jar",
+    "status": "UNRESOLVED",
+    "error": "Could not transfer artifact jre:jre:zip:call:1.0.0 from/to remote-models (http://download.eclipse.org/recommenders/models/juno/): Error transferring file, server returned status code 307"
+  }
+}
